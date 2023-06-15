@@ -10,7 +10,6 @@ return(
                 <> 
                 <li className="child" id={i}>{item.ItemName} - {item.ItemPrice}</li> <button onClick={()=> removeChild(i)}>Remove</button>
                 </>
-               
             )))
         }
         </ul>
