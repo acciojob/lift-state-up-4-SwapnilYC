@@ -8,7 +8,7 @@ return(
         {list &&
             (list.map( (item, i) => (
                 <> 
-                <li className="child" id={i}>{item.ItemName} - {item.ItemPrice}</li> <button onClick={()=> removeChild(i)}>Remove</button>
+                <li className="child li" id={i}>{item.ItemName} - {item.ItemPrice}</li> <button onClick={()=> removeChild(i)}>Remove</button>
                 </>
             )))
         }
