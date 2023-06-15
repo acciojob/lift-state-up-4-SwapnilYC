@@ -19,7 +19,7 @@ function Parent() {
     }
 
     return (
-        <div className="parent ">
+        <div className="parent">
             <label>Item Name:</label> <input type="text" id="itemName" onInput={(e) => setItemName(e.target.value)} />
             <label>Item Price:</label> <input type="number" id="itemPrice" onInput={(e) => setItemName(e.target.value)} />
             <button>Add Item</button>
