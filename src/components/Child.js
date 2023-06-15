@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 
 function Child({list}) {
 return(
-    <div>
+    <div className="child">
         <ul>
         {list &&
             (list.map( (item, i) => (
                 <> 
-                <li id={i}>{item.ItemName}-{item.ItemPrice}</li> <button onClick={()=> removeChild(i)}>Remove</button>
+                <li className="child" id={i}>{item.ItemName}-{item.ItemPrice}</li> <button onClick={()=> removeChild(i)}>Remove</button>
                 </>
                
             )))
