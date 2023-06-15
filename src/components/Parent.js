@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Child from "./Child"
+// import Child from "./Child"
 
 
 function Parent() {
@@ -9,8 +9,10 @@ function Parent() {
     let [itemPrice, setItemPrice] = useState("");
 
     function childHandler() {
-        let x = { "ItemName": itemName, "ItemPrice": itemPrice };
-        setList([...list, x]);
+        setList([...list, { "ItemName": itemName, "ItemPrice": itemPrice }]);
+        setItemName("");
+        setItemPrice("");
+        console.log(list)
     }
 
     function removeChild(index) {
@@ -20,10 +22,10 @@ function Parent() {
 
     return (
         <div className="parent">
-            <label>Item Name:</label> <input type="text" id="itemName" onInput={(e) => setItemName(e.target.value)} />
-            <label>Item Price:</label> <input type="number" id="itemPrice" onInput={(e) => setItemName(e.target.value)} />
-            <button>Add Item</button>
-            <Child listHandler={list} deleteChildHandler={removeChild} />
+            <label>Item Name:</label> <input value={itemName} type="text" id="itemName" onInput={(e) => setItemName(e.target.value)} />
+            <label>Item Price:</label> <input value={itemPrice} type="number" id="itemPrice" onInput={(e) => setItemPrice(e.target.value)} />
+            <button onClick={()=>childHandler()}>Add Item</button>
+            {/* <Child listHandler={list} deleteChildHandler={removeChild} /> */}
         </div>
     );
 }

@@ -6,7 +6,7 @@ return(
     <div className="child">
         <ul>
         {list &&
-            (list.map( (item, i) => (
+            (list?.map( (item, i) => (
                 <> 
                 <li className="child li" id={i}>{item.ItemName} - {item.ItemPrice}</li> <button onClick={()=> deleteChildHandler(i)}>Remove</button>
                 </>
